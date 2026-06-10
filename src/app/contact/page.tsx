@@ -14,11 +14,12 @@ export default function ContactPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6"><MessageSquare className="w-3 h-3" /> Get in Touch</div>
+          <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white mb-6">We'd love to <span className="gradient-text">hear from you</span></h1>
+          <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto mb-12">Have a question, suggestion, or just want to say hi? Drop us a message and we'll get back to you within 24 hours.</p>
+        </motion.div>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6"><MessageSquare className="w-3 h-3" /> Get in Touch</div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white mb-6">We'd love to <span className="gradient-text">hear from you</span></h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-md mb-12">Have a question, suggestion, or just want to say hi? Drop us a message and we'll get back to you within 24 hours.</p>
             <div className="space-y-6">
               {[
                 { icon: <Mail className="w-5 h-5" />, label: "Email", value: "hello@swaposcholar.com" },
@@ -26,7 +27,6 @@ export default function ContactPage() {
                 { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+91 98765 43210" },
               ].map(item => <div key={item.label} className="flex items-center gap-5"><div className="w-12 h-12 rounded-xl bg-primary/5 dark:bg-primary/10 flex items-center justify-center text-primary">{item.icon}</div><div><div className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">{item.label}</div><p className="text-sm font-semibold text-gray-800 dark:text-gray-100">{item.value}</p></div></div>)}
             </div>
-          </div>
 
           <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}>
             {submitted ? (

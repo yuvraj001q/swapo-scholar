@@ -13,9 +13,9 @@ export default function WishlistPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white flex items-center gap-4">
-            Your <span className="gradient-text">Wishlist</span> <Heart className="w-6 h-6 text-primary" fill="currentColor" />
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">
+            Your <span className="gradient-text">Wishlist</span> <Heart className="w-6 h-6 text-primary inline-block" fill="currentColor" />
           </h1>
           <p className="text-sm text-gray-400 mt-2">{wishlist.length} saved {wishlist.length === 1 ? "book" : "books"}</p>
         </motion.div>

@@ -14,12 +14,12 @@ export default function SellPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6"><DollarSign className="w-3 h-3" /> Start Earning</div>
+          <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white mb-6">Sell your <span className="gradient-text">used books</span></h1>
+          <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">Turn your old books into cash. List your used JEE, NEET & CBSE books and connect with students who need them.</p>
+        </motion.div>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left */}
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6"><DollarSign className="w-3 h-3" /> Start Earning</div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white mb-6">Sell your <span className="gradient-text">used books</span></h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-md mb-12">Turn your old books into cash. List your used JEE, NEET & CBSE books and connect with students who need them.</p>
             <div className="space-y-8">
               {[
                 { icon: <TrendingUp className="w-5 h-5" />, title: "AI-Powered Pricing", desc: "Our engine suggests the best price based on condition, demand & market trends." },
@@ -27,7 +27,6 @@ export default function SellPage() {
                 { icon: <Award className="w-5 h-5" />, title: "Earn Karma XP", desc: "Every sale earns you Karma points and grows your Study Lineage." },
               ].map(item => <div key={item.title} className="flex gap-5"><div className="w-12 h-12 rounded-xl bg-primary/5 dark:bg-primary/10 flex items-center justify-center text-primary shrink-0">{item.icon}</div><div><h3 className="font-bold text-sm text-gray-800 dark:text-gray-100">{item.title}</h3><p className="text-xs text-gray-400 dark:text-gray-500 mt-1 leading-relaxed">{item.desc}</p></div></div>)}
             </div>
-          </div>
 
           {/* Form */}
           <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}>

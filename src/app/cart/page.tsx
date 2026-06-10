@@ -15,9 +15,10 @@ export default function CartPage() {
   return (
     <div className="pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-between mb-12">
-          <div><h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">Your <span className="gradient-text">Cart</span></h1><p className="text-sm text-gray-400 mt-2">{cart.length} {cart.length === 1 ? "book" : "books"}</p></div>
-          <button onClick={() => { clearCart(); addToast("Cart cleared") }} className="text-xs font-semibold text-red-400 hover:text-red-500 transition-colors">Clear All</button>
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">Your <span className="gradient-text">Cart</span></h1>
+          <p className="text-sm text-gray-400 mt-2">{cart.length} {cart.length === 1 ? "book" : "books"}</p>
+          <button onClick={() => { clearCart(); addToast("Cart cleared") }} className="text-xs font-semibold text-red-400 hover:text-red-500 transition-colors mt-3">Clear All</button>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2 space-y-6">

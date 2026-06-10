@@ -65,23 +65,24 @@ export default function HomePage() {
 
       {/* Featured */}
       <section className="bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="flex items-center justify-between mb-12">
-            <div><span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2 block">Featured</span><h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">Handpicked for you</h2></div>
-            <Link href="/shop" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline underline-offset-4">View All <ArrowRight className="w-3.5 h-3.5" /></Link>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-center">
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="mb-12">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2 block">Featured</span>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white mb-6">Handpicked for you</h2>
+            <Link href="/shop" className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline underline-offset-4">View All <ArrowRight className="w-3 h-3" /></Link>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featured.map((book, i) => <BookCard key={book.id} book={book} index={i} />)}
           </div>
-          <div className="text-center mt-12 sm:hidden"><Link href="/shop" className="inline-flex items-center gap-1 text-sm font-semibold text-primary">View All <ArrowRight className="w-3.5 h-3.5" /></Link></div>
         </div>
       </section>
 
       {/* Top Rated */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24 md:py-32">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="flex items-center justify-between mb-12">
-          <div><span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2 block">Top Rated</span><h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">Students love these</h2></div>
-          <Link href="/shop?sort=rating" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline underline-offset-4">View All <ArrowRight className="w-3.5 h-3.5" /></Link>
+      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24 md:py-32 text-center">
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="mb-12">
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-2 block">Top Rated</span>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white mb-6">Students love these</h2>
+          <Link href="/shop?sort=rating" className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline underline-offset-4">View All <ArrowRight className="w-3 h-3" /></Link>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {topRated.map((book, i) => <BookCard key={book.id} book={book} index={i} />)}
