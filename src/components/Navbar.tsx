@@ -53,7 +53,7 @@ export default function Navbar() {
               Swapo<span className="text-primary">Scholar</span>
             </span>
           </Link>
-          <div className={`hidden lg:flex items-center gap-0.5 transition-all duration-300 ${scrolled ? "scale-90" : "scale-100"}`}>
+          <div className={`hidden lg:flex items-center gap-2 transition-all duration-300 ${scrolled ? "scale-90" : "scale-100"}`}>
             {links.map(link => (
               <Link key={link.href} href={link.href}
                 className={`relative rounded-xl text-xs font-semibold tracking-[0.08em] transition-all duration-200 whitespace-nowrap ${
@@ -68,7 +68,7 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-0.5">
+          <div className="flex items-center gap-2">
             <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.92 }}
               onClick={toggleTheme}
               className={`p-2 rounded-xl transition-all duration-200 relative ${
