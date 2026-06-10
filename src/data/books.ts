@@ -101,12 +101,25 @@ export const books = [
     Physics: "3b82f6", Chemistry: "8b5cf6", Mathematics: "ef4444",
     Biology: "10b981", "All Subjects": "f59e0b",
   }
+  const coverLib: Record<number, string> = {
+    5: "https://covers.openlibrary.org/b/id/11227189-L.jpg",
+    8: "https://covers.openlibrary.org/b/id/8671329-L.jpg",
+    9: "https://covers.openlibrary.org/b/id/8738319-L.jpg",
+    10: "https://covers.openlibrary.org/b/id/11943941-L.jpg",
+    11: "https://covers.openlibrary.org/b/id/11396271-L.jpg",
+    13: "https://covers.openlibrary.org/b/id/10468634-L.jpg",
+    14: "https://covers.openlibrary.org/b/id/10013419-L.jpg",
+    15: "https://covers.openlibrary.org/b/id/363623-L.jpg",
+    16: "https://covers.openlibrary.org/b/id/13589969-L.jpg",
+    19: "https://covers.openlibrary.org/b/id/10924595-L.jpg",
+  }
   const color = subjectColor[b.subject] || "6366f1"
-  const initials = b.title.split(" ").slice(0, 3).map(w => w[0]).join("").toUpperCase()
-  const placeholder = `https://placehold.co/400x600/${color}/fff?text=${initials}`
+  const escapedTitle = b.title.replace(/ /g, "+").replace(/[^a-zA-Z0-9+]/g, "")
+  const placeholder = `https://placehold.co/400x600/${color}/fff?text=${escapedTitle}&font=playfair-display`
+  const image = coverLib[b.id] || placeholder
   return {
-    ...b, price: calcPrice(b.mrp, b.condition), featured: b.trending || b.rating >= 4.8,
-    images: [b.image || placeholder], pages: 800, edition: "2024", language: "English",
+    ...b, image, price: calcPrice(b.mrp, b.condition), featured: b.trending || b.rating >= 4.8,
+    images: [image], pages: 800, edition: "2024", language: "English",
     owner: seller ? { name: seller.name, city: seller.city, karmaXP: seller.xp } : { name: b.seller, city: "India", karmaXP: b.karmaXP || 0 },
   }
 })
