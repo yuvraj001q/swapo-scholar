@@ -4,7 +4,7 @@ import { Search, BookOpen, ShoppingBag } from "lucide-react"
 
 function EmptyState({ icon, title, description, actionLabel, actionHref }: { icon: React.ReactNode; title: string; description: string; actionLabel?: string; actionHref?: string }) {
   return (
-    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
+    <div className="flex flex-col items-center justify-center py-16 px-4 text-center text-left">
       <div className="w-20 h-20 rounded-2xl bg-primary/5 dark:bg-primary/10 flex items-center justify-center mb-5 text-primary">{icon}</div>
       <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">{title}</h3>
       <p className="text-sm text-gray-400 dark:text-gray-500 max-w-xs mb-6">{description}</p>

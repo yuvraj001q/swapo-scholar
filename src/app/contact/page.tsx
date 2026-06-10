@@ -20,7 +20,7 @@ export default function ContactPage() {
           <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto mb-12">Have a question, suggestion, or just want to say hi? Drop us a message and we'll get back to you within 24 hours.</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-6">
+            <div className="space-y-6 text-left">
               {[
                 { icon: <Mail className="w-5 h-5" />, label: "Email", value: "hello@swaposcholar.com" },
                 { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "India (Remote-First)" },
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 <button onClick={() => setSubmitted(false)} className="px-8 py-3 gradient-bg text-white rounded-xl text-sm font-bold hover:shadow-lg transition-all">Send Another</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 space-y-5">
+              <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 space-y-5 text-left">
                 <div><label className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5 block">Name</label><input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Your name" className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 text-sm outline-none focus:border-primary transition-all" required /></div>
                 <div><label className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5 block">Email</label><input type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="your@email.com" className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 text-sm outline-none focus:border-primary transition-all" required /></div>
                 <div><label className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5 block">Subject</label><input value={form.subject} onChange={e => setForm({ ...form, subject: e.target.value })} placeholder="What's this about?" className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 text-sm outline-none focus:border-primary transition-all" /></div>

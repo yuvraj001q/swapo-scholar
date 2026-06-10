@@ -42,7 +42,7 @@ export default function BookDetailPage() {
           </motion.div>
 
           {/* Info */}
-          <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }}>
+          <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} className="text-left">
             <div className="flex items-center gap-3 mb-6 flex-wrap">
               <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/5 dark:bg-primary/10 px-3 py-1 rounded-lg">{book.examType}</span>
               <span className="text-[10px] font-medium text-gray-400 dark:text-gray-500">Class {book.class}</span>

@@ -29,7 +29,7 @@ export default function Navbar() {
   const transparent = isHome && !scrolled
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-6">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-6 text-left">
       <motion.nav
         animate={{ width: scrolled ? "auto" : "100%", maxWidth: scrolled ? "720px" : "1280px", borderRadius: scrolled ? "9999px" : "16px", boxShadow: scrolled ? "0 8px 32px rgba(0,0,0,0.12)" : "0 0 0 transparent" }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}

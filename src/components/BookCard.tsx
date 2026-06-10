@@ -37,7 +37,7 @@ export default function BookCard({ book, index = 0 }: { book: Book; index?: numb
   return (
     <motion.div ref={cardRef} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
       onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ rotateX, rotateY, transformPerspective: 1000 }}
-      className={`group relative rounded-2xl overflow-hidden bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 shadow-sm hover:shadow-xl transition-shadow duration-300 ${glowClass}`}>
+      className={`group relative rounded-2xl overflow-hidden bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 shadow-sm hover:shadow-xl transition-shadow duration-300 text-left ${glowClass}`}>
       <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         style={{ background: `radial-gradient(circle at ${glareX} ${glareY}, rgba(0,240,255,0.08) 0%, transparent 60%)` }} />
       <Link href={`/book/${book.id}`} className="block relative overflow-hidden aspect-[3/4] bg-gray-50 dark:bg-gray-800/40">

@@ -20,7 +20,7 @@ export default function GuidancePage() {
         {/* Senior Stories */}
         <motion.div variants={stagger} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-80px" }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {seniorStories.map(s => (
-            <motion.div key={s.name} variants={fadeUp} className="group p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+            <motion.div key={s.name} variants={fadeUp} className="group p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-left">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-lg">{s.name[0]}</div>
                 <div><div className="font-bold text-sm text-gray-800 dark:text-gray-100">{s.name}</div><div className="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-wider">{s.college} · {s.exam} {s.year}</div></div>
@@ -40,7 +40,7 @@ export default function GuidancePage() {
           <div className="text-center mb-12"><h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">What students <span className="gradient-text">say about us</span></h2></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.slice(0, 3).map(t => (
-              <div key={t.name} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 hover:shadow-lg transition-shadow">
+              <div key={t.name} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 hover:shadow-lg transition-shadow text-left">
                 <Quote className="w-6 h-6 text-primary/30 mb-4" />
                 <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 italic">"{t.content}"</p>
                 <div className="flex items-center gap-4"><div className="w-10 h-10 rounded-full bg-primary/70 flex items-center justify-center text-white text-xs font-bold">{t.name[0]}</div><div><div className="text-sm font-semibold text-gray-800 dark:text-gray-100">{t.name}</div><div className="text-[10px] text-gray-400">{t.role}</div></div></div>
@@ -52,7 +52,7 @@ export default function GuidancePage() {
         {/* FAQ */}
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}>
           <div className="text-center mb-12"><span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 block">FAQ</span><h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">Got <span className="gradient-text">questions?</span></h2></div>
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="max-w-3xl mx-auto space-y-4 text-left">
             {faqs.map((faq, i) => (
               <details key={i} className="group p-6 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 cursor-pointer hover:border-gray-200 dark:hover:border-gray-600 transition-all">
                 <summary className="flex items-center justify-between text-sm font-semibold text-gray-800 dark:text-gray-100 list-none [&::-webkit-details-marker]:hidden">

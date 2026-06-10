@@ -17,7 +17,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen bg-gray-50 dark:bg-dark-bg text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300">
+      <body className="min-h-screen bg-gray-50 dark:bg-dark-bg text-gray-800 dark:text-gray-100 antialiased transition-colors duration-300 text-center">
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>

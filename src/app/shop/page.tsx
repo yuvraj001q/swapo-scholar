@@ -52,7 +52,7 @@ function ShopContent() {
         </motion.div>
 
         {/* Search + Filters */}
-        <div className="flex flex-col lg:flex-row gap-4 mb-8 max-w-3xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-4 mb-8 max-w-3xl mx-auto text-left">
           <div className="flex-1 relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <input value={search} onChange={e => { setSearch(e.target.value); setLoading(true); setTimeout(() => setLoading(false), 300) }} placeholder="Search by title, author, subject..." className="w-full pl-11 pr-4 py-3 rounded-xl bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 text-sm text-gray-800 dark:text-white placeholder:text-gray-400 outline-none focus:border-primary transition-all" />
@@ -84,7 +84,7 @@ function ShopContent() {
         ) : filtered.length === 0 ? (
           <EmptySearch query={search} />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             {filtered.map((book, i) => <BookCard key={book.id} book={book} index={i} />)}
           </div>
         )}

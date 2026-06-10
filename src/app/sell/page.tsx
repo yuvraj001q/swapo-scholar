@@ -20,7 +20,7 @@ export default function SellPage() {
           <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">Turn your old books into cash. List your used JEE, NEET & CBSE books and connect with students who need them.</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-8">
+            <div className="space-y-8 text-left">
               {[
                 { icon: <TrendingUp className="w-5 h-5" />, title: "AI-Powered Pricing", desc: "Our engine suggests the best price based on condition, demand & market trends." },
                 { icon: <Users className="w-5 h-5" />, title: "5K+ Active Students", desc: "Join a thriving community of student buyers and sellers across India." },
@@ -38,7 +38,7 @@ export default function SellPage() {
                 <button onClick={() => setSubmitted(false)} className="px-8 py-3 gradient-bg text-white rounded-xl text-sm font-bold hover:shadow-lg hover:shadow-primary/30 transition-all">List Another Book</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 space-y-6">
+              <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 space-y-6 text-left">
                 <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">Book Details</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="sm:col-span-2"><label className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5 block">Book Title</label><input value={form.bookTitle} onChange={e => setForm({ ...form, bookTitle: e.target.value })} placeholder="e.g. Physics Galaxy" className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 text-sm outline-none focus:border-primary transition-all" required /></div>

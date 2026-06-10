@@ -21,7 +21,7 @@ export default function AboutPage() {
             { icon: <Heart className="w-6 h-6" />, title: "Why We Exist", desc: "We've been there. We know how expensive JEE, NEET & CBSE prep can be. Swapo Scholar is our answer to a broken system where books cost a fortune and gather dust after exams." },
             { icon: <Zap className="w-6 h-6" />, title: "Our Impact", desc: "10,000+ books listed, ₹50 lakh+ saved by students, and a growing community of 5,000+ student changemakers across India." },
           ].map(item => (
-            <motion.div key={item.title} variants={fadeUp} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-80px" }} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 group hover:shadow-lg hover:border-primary/20 transition-all">
+            <motion.div key={item.title} variants={fadeUp} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-80px" }} className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 group hover:shadow-lg hover:border-primary/20 transition-all text-left">
               <div className="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">{item.icon}</div>
               <h3 className="font-bold text-lg text-gray-800 dark:text-gray-100 mb-3">{item.title}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>

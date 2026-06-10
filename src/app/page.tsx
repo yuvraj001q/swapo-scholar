@@ -46,12 +46,12 @@ export default function HomePage() {
       </section>
 
       {/* Categories */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24 md:py-32">
-        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="text-center mb-16">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24 md:py-32 text-center">
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} className="mb-16">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Browse by Category</span>
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-gray-900 dark:text-white">Find what you need</h2>
         </motion.div>
-        <motion.div variants={stagger} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-80px" }} className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <motion.div variants={stagger} initial="initial" whileInView="animate" viewport={{ once: true, margin: "-80px" }} className="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
           {categories.map(cat => (
             <motion.div key={cat.name} variants={fadeUp}>
               <Link href={`/shop?category=${encodeURIComponent(cat.name)}`} className="group relative block p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 hover:border-primary/40 hover:shadow-lg transition-all duration-300 overflow-hidden">

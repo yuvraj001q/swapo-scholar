@@ -21,7 +21,7 @@ export default function CartPage() {
           <button onClick={() => { clearCart(); addToast("Cart cleared") }} className="text-xs font-semibold text-red-400 hover:text-red-500 transition-colors mt-3">Clear All</button>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-6 text-left">
             {cart.map((item, i) => (
               <motion.div key={item.id} initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.04 }}
                 className="flex gap-6 p-6 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 hover:shadow-md transition-shadow group">
@@ -42,7 +42,7 @@ export default function CartPage() {
           </div>
           {/* Summary */}
           <div className="lg:col-span-1">
-            <div className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 sticky top-32">
+            <div className="p-8 rounded-2xl bg-white dark:bg-dark-card border border-gray-100 dark:border-gray-700/40 sticky top-32 text-left">
               <h3 className="font-bold text-base text-gray-800 dark:text-gray-100 mb-6">Order Summary</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between text-sm"><span className="text-gray-400">Subtotal</span><span className="font-semibold text-gray-800 dark:text-gray-200">₹{totalPrice}</span></div>
