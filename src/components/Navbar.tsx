@@ -56,12 +56,10 @@ export default function Navbar() {
           <div className={`hidden lg:flex items-center gap-0.5 transition-all duration-300 ${scrolled ? "scale-90" : "scale-100"}`}>
             {links.map(link => (
               <Link key={link.href} href={link.href}
-                className={`relative px-3 py-1.5 rounded-xl text-xs font-medium tracking-wide transition-all duration-200 whitespace-nowrap ${
+                className={`relative rounded-xl text-xs font-semibold tracking-[0.08em] transition-all duration-200 whitespace-nowrap ${
                   pathname === link.href
-                    ? "bg-gradient-to-r from-primary/20 to-secondary/20 text-gray-900 dark:text-white shadow-sm"
-                    : transparent
-                      ? "text-white/70 hover:text-white hover:bg-white/[0.08]"
-                      : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-900/5 dark:hover:bg-white/5"
+                    ? "px-5 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 text-gray-900 dark:text-white shadow-sm"
+                    : `px-3 py-1.5 ${transparent ? "text-white/70 hover:text-white hover:bg-white/[0.08]" : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-900/5 dark:hover:bg-white/5"}`
                 }`}>
                 {pathname === link.href && (
                   <motion.span layoutId="nav-indicator" className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 -z-10" transition={{ type: "spring", stiffness: 400, damping: 30 }} />
